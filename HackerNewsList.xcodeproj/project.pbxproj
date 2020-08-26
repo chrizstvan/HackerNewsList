@@ -15,6 +15,8 @@
 		0425068C24F6125400932096 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0425068A24F6125400932096 /* LaunchScreen.storyboard */; };
 		0425069524F618C400932096 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425069424F618C400932096 /* NetworkManager.swift */; };
 		0425069724F61B3200932096 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425069624F61B3200932096 /* PostData.swift */; };
+		0425069A24F6223600932096 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0425069924F6223600932096 /* DetailView.swift */; };
+		04926C6024F626E50013471D /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04926C5F24F626E50013471D /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		0425068D24F6125400932096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0425069424F618C400932096 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0425069624F61B3200932096 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		0425069924F6223600932096 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		04926C5F24F626E50013471D /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				0425068324F6125100932096 /* ContentView.swift */,
+				0425069924F6223600932096 /* DetailView.swift */,
+				04926C5F24F626E50013471D /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,10 +175,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0425069724F61B3200932096 /* PostData.swift in Sources */,
+				0425069A24F6223600932096 /* DetailView.swift in Sources */,
 				0425069524F618C400932096 /* NetworkManager.swift in Sources */,
 				0425068024F6125100932096 /* AppDelegate.swift in Sources */,
 				0425068224F6125100932096 /* SceneDelegate.swift in Sources */,
 				0425068424F6125100932096 /* ContentView.swift in Sources */,
+				04926C6024F626E50013471D /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
