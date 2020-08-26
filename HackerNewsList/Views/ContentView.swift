@@ -10,11 +10,11 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var networkManager = NetworkManager()
+    @ObservedObject var newsVM = NewsViewModel()
     
     var body: some View {
         NavigationView {
-            List(networkManager.posts) { post in
+            List(newsVM.posts) { post in
                 NavigationLink(destination: DetailView(url: post.url)) {
                     HStack {
                         Text(String(post.points))
@@ -25,7 +25,7 @@ struct ContentView: View {
         .navigationBarTitle("Hacker News")
         }
         .onAppear {
-            self.networkManager.fetchData()
+            self.newsVM.fetchData()
         }
     }
 }
