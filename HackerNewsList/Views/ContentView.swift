@@ -14,18 +14,19 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(newsVM.posts) { post in
-                NavigationLink(destination: DetailView(url: post.url)) {
+            List(newsVM.stories, id: \.id) { story in
+                NavigationLink(destination: EmptyView() /*DetailView(url: post.url)*/) {
                     HStack {
-                        Text(String(post.points))
-                        Text(post.title)
+                        Text(String(story.id))
+                        Text(String(story.id))
                     }
                 }
             }
         .navigationBarTitle("Hacker News")
         }
         .onAppear {
-            self.newsVM.fetchData()
+            //self.newsVM.fetchData()
+            
         }
     }
 }

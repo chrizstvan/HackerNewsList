@@ -21,3 +21,12 @@ struct Post: Decodable, Identifiable {
     let title: String
     let url: String?
 }
+
+// combine implementation
+struct Story: Codable {
+    let id: Int
+    let title: String
+    let url: String
+}
+
+
