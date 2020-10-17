@@ -48,37 +48,27 @@ class NewsViewModel: ObservableObject {
     }
     
     func fetchTopStories() {
-        self.cancelable = WebService().fetchDataWithCombine().map { storyIds in
-            storyIds.map { StoryViewModel(id: $0)}
+        self.cancelable = WebService().fetchDataWithCombine().map { stories in
+            stories.map { StoryViewModel(story: $0)}
         }
         .sink(receiveCompletion: { _ in }) { (storyVM) in
             self.stories = storyVM
+            print(storyVM)
         }
     }
 }
 
-// with combine implementation
+// with combine implementation same with news view model in the prev version
 struct StoryViewModel {
-    let id: Int
-}
-
-class StoryDetailViewModel: ObservableObject {
-    var storyId: Int
-    private var cancelable: AnyCancellable?
+    //let id: Int -> comment out after combined API
     
-    @Published private var story: Story!
+    // after combine merge api create this story
+    let story: Story
     
-    init(storyId: Int) {
-        self.storyId = storyId
-        
-        WebService().getStroryById(id: storyId)
-            .sink(receiveCompletion: { _ in }) { (story) in
-                self.story = story
-        }
+    var id: Int {
+        return self.story.id
     }
-}
-
-extension StoryDetailViewModel {
+    
     var title: String {
         self.story.title
     }

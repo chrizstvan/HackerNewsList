@@ -9,13 +9,21 @@
 import SwiftUI
 
 struct StoryDetailView: View {
+    //@ObservedObject private var storyDetailVM: StoryDetailViewModel
+    let url: String
+    
+//    init(storyId: Int) {
+//        //self.storyDetailVM = StoryDetailViewModel(storyId: storyId)
+//    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        //Text(storyDetailVM.title)
+        WebView(urlString: url)
     }
 }
 
 struct StoryDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        StoryDetailView()
+        StoryDetailView(url: "")
     }
 }

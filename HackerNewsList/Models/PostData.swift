@@ -29,4 +29,10 @@ struct Story: Codable {
     let url: String
 }
 
+extension Story {
+    static func placeholder() -> Story {
+        Story(id: 0, title: "N/A", url: "")
+    }
+}
+
 
